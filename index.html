@@ -906,48 +906,7 @@
 
                 <div class="booking-form-grid">
                     <div>
-                            <div class="form-group">
-    
-    <label style="font-weight: 600;">Reservation Dates (Open from 2027)</label>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
-        <div>
-            <span style="font-size: 0.8rem; color: #475569; display:block; margin-bottom:4px;">Check-In Date</span>
-            <input type="date" id="booking-checkin" min="2027-01-01" class="input-number" onchange="calculateLiveTotals()">
-        </div>
-        <div>
-            <span style="font-size: 0.8rem; color: #475569; display:block; margin-bottom:4px;">Check-Out Date</span>
-            <input type="date" id="booking-checkout" min="2027-01-02" class="input-number" onchange="calculateLiveTotals()">
-        </div>
-    </div>
-
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
-        <div class="form-group" style="margin-bottom: 0;">
-            <label style="font-weight: 600;">Preferred Booking Time Zone</label>
-            <select id="booking-timezone" class="input-number" onchange="calculateLiveTotals()">
-                <option value="Europe/Zagreb">Local Time (Croatia - CET/CEST)</option>
-                <option value="GMT">Greenwich Mean Time (GMT)</option>
-                <option value="EST">Eastern Standard Time (EST)</option>
-            </select>
-        </div>
-        <div class="form-group" style="margin-bottom: 0;">
-            <label style="font-weight: 600;">Number of Rooms</label>
-            <input type="number" id="num-rooms-qty" min="1" max="10" value="1" class="input-number" onchange="calculateLiveTotals()">
-        </div>
-    </div>
-    <label id="txt-choose-style-lbl">Choose Room Style</label>
-    <div class="room-selector-cards">
-        <div class="room-card" id="rc-regular" onclick="selectRoomTile(&#39;regular&#39;, 100)">
-            <input type="radio" name="room_tier" id="radio-regular" checked="">
-            <h4 id="txt-card-r-label">Regular Room</h4>
-            <div class="price-tag">£100</div>
-        </div>
-        <div class="room-card selected" id="rc-suite" onclick="selectRoomTile(&#39;suite&#39;, 200)">
-            <input type="radio" name="room_tier" id="radio-suite">
-            <h4 id="txt-card-s-label">Luxury Suite</h4>
-            <div class="price-tag">£200</div>
-        </div>
-    </div>
-</div>
+                        <div class="form-group">
                             <label id="txt-choose-style-lbl">Choose Room Style</label>
                             <div class="room-selector-cards">
                                 <div class="room-card" id="rc-regular" onclick="selectRoomTile(&#39;regular&#39;, 100)">
@@ -982,14 +941,19 @@
 
                     <div>
                         <div class="summary-box">
-                         <div class="summary-line">
-    <span>Nights Stayed:</span>
-    <span id="preview-nights-count" style="font-weight: 600;">0 nights</span>
-</div>
-<div class="summary-line">
-    <span>Total Rooms:</span>
-    <span id="preview-rooms-count" style="font-weight: 600;">1 room</span>
-</div>
+                            <h3 id="txt-summary-title">Live Summary</h3>
+                            <div class="summary-line">
+                                <span id="lbl-summary-room">Luxury Suite</span>
+                                <span id="lbl-summary-room-price">£200</span>
+                            </div>
+                            <div class="summary-line">
+                                <span id="txt-summary-occupancy">Occupancy</span>
+                                <span id="lbl-summary-people">x 1</span>
+                            </div>
+                            <div class="summary-line" id="line-dining-cost" style="display: flex;">
+                                <span id="txt-summary-dining-pkg">Dining Package</span>
+                                <span id="lbl-summary-dining-price">£50</span>
+                            </div>
                             <div class="summary-total">
                                 <span id="txt-summary-total-lbl">Total</span>
                                 <span id="lbl-summary-total">£250</span>
