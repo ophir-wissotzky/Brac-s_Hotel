@@ -878,113 +878,92 @@
                 </div>
             </div>
         </section>
-     <section id="page-booking" class="card tab-page active-page">
-    <h2 class="section-title" id="txt-book-main-title">Accommodations &amp; Tiers</h2>
-    <p id="txt-book-main-desc">Explore our seasonal room configurations below. Standard overnight stays feature full retreat access, private cliffside pathways, and balcony views.</p>
 
-    <div class="booking-menu-cards">
-        <div class="tier-display-card">
-            <h3 id="txt-tier-r-title">Regular Room</h3>
-            <p id="txt-tier-r-desc" style="color:#64748b; font-size:0.9rem;">Elegant local stone decor with full sea vistas.</p>
-            <div class="display-price">£100 <span id="txt-per-night-1" style="font-size:0.85rem; color:#64748b; font-weight:normal;">/ night</span></div>
-        </div>
-        <div class="tier-display-card">
-            <h3 id="txt-tier-s-title">Luxury Suite</h3>
-            <p id="txt-tier-s-desc" style="color:#64748b; font-size:0.9rem;">Expansive footprint featuring a panoramic lounge.</p>
-            <div class="display-price">£200 <span id="txt-per-night-2" style="font-size:0.85rem; color:#64748b; font-weight:normal;">/ night</span></div>
-        </div>
-    </div>
+        <section id="page-booking" class="card tab-page active-page">
+            <h2 class="section-title" id="txt-book-main-title">Accommodations &amp; Tiers</h2>
+            <p id="txt-book-main-desc">Explore our seasonal room configurations below. Standard overnight stays feature full retreat access, private cliffside pathways, and balcony views.</p>
 
-    <div class="preorder-action-banner" id="preorder-trigger-zone" style="display: block;">
-        <p id="txt-preorder-banner-msg">✨ Customize your reservation occupancy limits and include fine dining options before checking out.</p>
-        <button class="noticeable-preorder-btn" id="txt-preorder-btn-go" onclick="revealPreorderEngine()">Go to Pre-Order &amp; Options ↓</button>
-    </div>
-
-    <div class="preorder-interactive-engine" id="preorder-engine-box" style="display: none;">
-        <h3 id="txt-configure-title" style="text-transform:uppercase; letter-spacing:0.05em; margin-bottom:1.5rem; color:#0f172a;">Configure Your Pre-Order</h3>
-
-        <div class="booking-form-grid">
-            <div>
-                <div class="form-group">
-                    <label id="txt-choose-style-lbl">Choose Room Style</label>
-                    <div class="room-selector-cards">
-                        <div class="room-card" id="rc-regular" onclick="selectRoomTile('regular', 100)">
-                            <input type="radio" name="room_tier" id="radio-regular" checked="">
-                            <h4 id="txt-card-r-label">Regular Room</h4>
-                            <div class="price-tag">£100</div>
-                        </div>
-                        <div class="room-card selected" id="rc-suite" onclick="selectRoomTile('suite', 200)">
-                            <input type="radio" name="room_tier" id="radio-suite">
-                            <h4 id="txt-card-s-label">Luxury Suite</h4>
-                            <div class="price-tag">£200</div>
-                        </div>
-                    </div>
+            <div class="booking-menu-cards">
+                <div class="tier-display-card">
+                    <h3 id="txt-tier-r-title">Regular Room</h3>
+                    <p id="txt-tier-r-desc" style="color:#64748b; font-size:0.9rem;">Elegant local stone decor with full sea vistas.</p>
+                    <div class="display-price">£100 <span id="txt-per-night-1" style="font-size:0.85rem; color:#64748b; font-weight:normal;">/ night</span></div>
                 </div>
-
-                <!-- ⭐ ADDED DATE FIELDS -->
-                <div class="form-group">
-                    <label for="booking-checkin">Check-In Date</label>
-                    <input type="date" id="booking-checkin" class="input-date" onchange="calculateLiveTotals()">
-                </div>
-
-                <div class="form-group">
-                    <label for="booking-checkout">Check-Out Date</label>
-                    <input type="date" id="booking-checkout" class="input-date" onchange="calculateLiveTotals()">
-                </div>
-                <!-- END DATE FIELDS -->
-
-                <div class="form-group">
-                    <label for="booking-people" id="txt-guests-label">Number of People (Guests)</label>
-                    <input type="number" id="booking-people" class="input-number" value="1" min="1" max="10" oninput="calculateLiveTotals()">
-                </div>
-
-                <div class="form-group">
-                    <label id="txt-addons-label">Optional Add-ons</label>
-                    <label class="checkbox-container" onclick="setTimeout(calculateLiveTotals, 50)">
-                        <input type="checkbox" id="booking-dining">
-                        <div>
-                            <strong id="txt-dining-title">Add All-Day Dining Upgrade (+£50 per person)</strong>
-                            <p id="txt-dining-desc" style="font-size:0.85rem; color:#64748b; margin-top:0.2rem;">Includes premium artisanal breakfast, coastal lunch options, and full multi-course dinners.</p>
-                        </div>
-                    </label>
+                <div class="tier-display-card">
+                    <h3 id="txt-tier-s-title">Luxury Suite</h3>
+                    <p id="txt-tier-s-desc" style="color:#64748b; font-size:0.9rem;">Expansive footprint featuring a panoramic lounge.</p>
+                    <div class="display-price">£200 <span id="txt-per-night-2" style="font-size:0.85rem; color:#64748b; font-weight:normal;">/ night</span></div>
                 </div>
             </div>
 
-            <div>
-                <div class="summary-box">
-                    <h3 id="txt-summary-title">Live Summary</h3>
-                    <div class="summary-line">
-                        <span id="lbl-summary-room">Luxury Suite</span>
-                        <span id="lbl-summary-room-price">£200</span>
+            <div class="preorder-action-banner" id="preorder-trigger-zone" style="display: block;">
+                <p id="txt-preorder-banner-msg">✨ Customize your reservation occupancy limits and include fine dining options before checking out.</p>
+                <button class="noticeable-preorder-btn" id="txt-preorder-btn-go" onclick="revealPreorderEngine()">Go to Pre-Order &amp; Options ↓</button>
+            </div>
+
+            <div class="preorder-interactive-engine" id="preorder-engine-box" style="display: none;">
+                <h3 id="txt-configure-title" style="text-transform:uppercase; letter-spacing:0.05em; margin-bottom:1.5rem; color:#0f172a;">Configure Your Pre-Order</h3>
+
+                <div class="booking-form-grid">
+                    <div>
+                        <div class="form-group">
+                            <label id="txt-choose-style-lbl">Choose Room Style</label>
+                            <div class="room-selector-cards">
+                                <div class="room-card" id="rc-regular" onclick="selectRoomTile(&#39;regular&#39;, 100)">
+                                    <input type="radio" name="room_tier" id="radio-regular" checked="">
+                                    <h4 id="txt-card-r-label">Regular Room</h4>
+                                    <div class="price-tag">£100</div>
+                                </div>
+                                <div class="room-card selected" id="rc-suite" onclick="selectRoomTile(&#39;suite&#39;, 200)">
+                                    <input type="radio" name="room_tier" id="radio-suite">
+                                    <h4 id="txt-card-s-label">Luxury Suite</h4>
+                                    <div class="price-tag">£200</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="booking-people" id="txt-guests-label">Number of People (Guests)</label>
+                            <input type="number" id="booking-people" class="input-number" value="1" min="1" max="10" oninput="calculateLiveTotals()">
+                        </div>
+
+                        <div class="form-group">
+                            <label id="txt-addons-label">Optional Add-ons</label>
+                            <label class="checkbox-container" onclick="setTimeout(calculateLiveTotals, 50)">
+                                <input type="checkbox" id="booking-dining">
+                                <div>
+                                    <strong id="txt-dining-title">Add All-Day Dining Upgrade (+£50 per person)</strong>
+                                    <p id="txt-dining-desc" style="font-size:0.85rem; color:#64748b; margin-top:0.2rem;">Includes premium artisanal breakfast, coastal lunch options, and full multi-course dinners.</p>
+                                </div>
+                            </label>
+                        </div>
                     </div>
 
-                    <!-- ⭐ ADDED NIGHTS SUMMARY -->
-                    <div class="summary-line">
-                        <span>Stay Duration</span>
-                        <span id="lbl-summary-nights">0 nights</span>
+                    <div>
+                        <div class="summary-box">
+                            <h3 id="txt-summary-title">Live Summary</h3>
+                            <div class="summary-line">
+                                <span id="lbl-summary-room">Luxury Suite</span>
+                                <span id="lbl-summary-room-price">£200</span>
+                            </div>
+                            <div class="summary-line">
+                                <span id="txt-summary-occupancy">Occupancy</span>
+                                <span id="lbl-summary-people">x 1</span>
+                            </div>
+                            <div class="summary-line" id="line-dining-cost" style="display: flex;">
+                                <span id="txt-summary-dining-pkg">Dining Package</span>
+                                <span id="lbl-summary-dining-price">£50</span>
+                            </div>
+                            <div class="summary-total">
+                                <span id="txt-summary-total-lbl">Total</span>
+                                <span id="lbl-summary-total">£250</span>
+                            </div>
+                            <button class="btn-book-action" id="txt-btn-book-now" onclick="processOrderToCart()">Book Stay</button>
+                        </div>
                     </div>
-                    <!-- END NIGHTS SUMMARY -->
-
-                    <div class="summary-line">
-                        <span id="txt-summary-occupancy">Occupancy</span>
-                        <span id="lbl-summary-people">x 1</span>
-                    </div>
-                    <div class="summary-line" id="line-dining-cost" style="display: flex;">
-                        <span id="txt-summary-dining-pkg">Dining Package</span>
-                        <span id="lbl-summary-dining-price">£50</span>
-                    </div>
-                    <div class="summary-total">
-                        <span id="txt-summary-total-lbl">Total</span>
-                        <span id="lbl-summary-total">£250</span>
-                    </div>
-                    <button class="btn-book-action" id="txt-btn-book-now" onclick="processOrderToCart()">Book Stay</button>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-      
+        </section>
 
     </main>
 
@@ -1558,76 +1537,59 @@
             if (document.getElementById('txt-cart-btn-cancel')) document.getElementById('txt-cart-btn-cancel').textContent = dict.cartCancelBtn;
             if (document.getElementById('txt-footer-copyright')) document.getElementById('txt-footer-copyright').textContent = dict.copyright;
 
-         function calculateLiveTotals() {
-    const activeLangKey = document.getElementById('site-language-picker').value;
-    const dict = translations[activeLangKey] || translations['en'];
+            calculateLiveTotals();
+        }
 
-    const guestsCount = parseInt(document.getElementById('booking-people').value) || 1;
-    const diningChecked = document.getElementById('booking-dining').checked;
+        function revealPreorderEngine() {
+            document.getElementById('preorder-engine-box').style.display = 'block';
+            document.getElementById('preorder-trigger-zone').style.display = 'none';
+            calculateLiveTotals();
+            document.getElementById('preorder-engine-box').scrollIntoView({ behavior: 'smooth' });
+        }
 
-    /* -----------------------------
-       ⭐ NEW: DATE HANDLING + NIGHTS
-       ----------------------------- */
-    const checkin = document.getElementById('booking-checkin').value;
-    const checkout = document.getElementById('booking-checkout').value;
+        function selectRoomTile(type, price) {
+            selectedRoomType = type;
+            selectedRoomBasePrice = price;
+            document.getElementById('rc-regular').classList.remove('selected');
+            document.getElementById('rc-suite').classList.remove('selected');
+            document.getElementById('rc-' + type).classList.add('selected');
+            document.getElementById('radio-' + type).checked = true;
+            calculateLiveTotals();
+        }
 
-    let nights = 0;
-    if (checkin && checkout) {
-        const inDate = new Date(checkin);
-        const outDate = new Date(checkout);
-        const diff = outDate - inDate;
+        function calculateLiveTotals() {
+            const activeLangKey = document.getElementById('site-language-picker').value;
+            const dict = translations[activeLangKey] || translations['en'];
 
-        nights = diff / (1000 * 60 * 60 * 24);
-        if (nights < 0) nights = 0;
-    }
+            const guestsCount = parseInt(document.getElementById('booking-people').value) || 1;
+            const diningChecked = document.getElementById('booking-dining').checked;
 
-    // Update nights in summary
-    document.getElementById('lbl-summary-nights').textContent = nights + ' ' + dict.nightsLabel;
-    /* ----------------------------- */
+            const roomTotalCost = selectedRoomBasePrice * guestsCount;
 
-    /* -----------------------------
-       ROOM COST (per night × nights)
-       ----------------------------- */
-    const roomCostPerNight = selectedRoomBasePrice;
-    const roomTotalCost = roomCostPerNight * nights;
+            const roomNameTranslated = selectedRoomType === 'regular' ? dict.tierRTitle : dict.tierSTitle;
+            document.getElementById('lbl-summary-room').textContent = roomNameTranslated;
+            document.getElementById('lbl-summary-room-price').textContent = '£' + roomTotalCost;
+            document.getElementById('lbl-summary-people').textContent = 'x ' + guestsCount;
 
-    const roomNameTranslated =
-        selectedRoomType === 'regular'
-            ? dict.tierRTitle
-            : dict.tierSTitle;
+            let diningTotalCost = 0;
+            if (diningChecked) {
+                diningTotalCost = 50 * guestsCount;
+                document.getElementById('line-dining-cost').style.display = 'flex';
+                document.getElementById('lbl-summary-dining-price').textContent = '£' + diningTotalCost;
+            } else {
+                document.getElementById('line-dining-cost').style.display = 'none';
+            }
 
-    document.getElementById('lbl-summary-room').textContent = roomNameTranslated;
-    document.getElementById('lbl-summary-room-price').textContent = '£' + roomTotalCost;
-    document.getElementById('lbl-summary-people').textContent = 'x ' + guestsCount;
+            const netFinalTotal = roomTotalCost + diningTotalCost;
+            document.getElementById('lbl-summary-total').textContent = '£' + netFinalTotal;
 
-    /* -----------------------------
-       DINING COST (only if < 7 nights)
-       ----------------------------- */
-    let diningTotalCost = 0;
-
-    if (diningChecked && nights < 7) {
-        diningTotalCost = 50 * guestsCount;
-        document.getElementById('line-dining-cost').style.display = 'flex';
-        document.getElementById('lbl-summary-dining-price').textContent = '£' + diningTotalCost;
-    } else {
-        document.getElementById('line-dining-cost').style.display = 'none';
-    }
-
-    /* -----------------------------
-       FINAL TOTAL
-       ----------------------------- */
-    const netFinalTotal = roomTotalCost + diningTotalCost;
-    document.getElementById('lbl-summary-total').textContent = '£' + netFinalTotal;
-
-    return {
-        room: roomNameTranslated,
-        guests: guestsCount,
-        nights: nights,
-        dining: diningChecked ? 'Yes' : 'No',
-        total: netFinalTotal
-    };
-}
-
+            return {
+                room: roomNameTranslated,
+                guests: guestsCount,
+                dining: diningChecked ? 'Yes' : 'No',
+                total: netFinalTotal
+            };
+        }
 
         function processOrderToCart() {
             const activeLangKey = document.getElementById('site-language-picker').value;
